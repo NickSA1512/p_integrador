@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+
+{% load static %}
+<link rel="stylesheet" href="{% static 'cardapios/style.css' %}">
+
+
+<head>
+    <meta charset="UTF-8">
+    <title>{{ cardapio.nome }}</title>
+</head>
+
+
+<body>
+
+<div class="main">
+    <div class="sidebar">
+        <h1>{{ cardapio.nome }}</h1>
+        <ul>
+            {% for segmento in cardapio.segmento_set.all %}
+            <li>{{ segmento.nome }}</li>
+            {% endfor %}
+        </ul>
+    </div>
+
+    <div class="textview">
+        <ul>
+            {% for segmento in cardapio.segmento_set.all %}
+                <li><h3>{{ segmento.nome }}</h3></li>
+                <ul>
+                    {% for item in segmento.item_set.all %}
+                    <li>
+                        <p>{{ item.nome }}</p>
+                        <img src="/static/media/{{ item.imagem }}" alt="{{ item.imagem|default_if_none:'' }}">
+                        <p>{{ item.info|default_if_none:'' }}</p>
+                        <p>{{ item.pric|default_if_none:'' }}</p>
+                        <br />
+                    </li>
+                    {% endfor %}
+                </ul>
+            {% endfor %}
+        </ul>
+    </div>
+</div>
+
+</body>
+</html>
