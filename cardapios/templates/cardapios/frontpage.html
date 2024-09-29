@@ -1,53 +1,89 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
-    {% load static %}
-<link rel="stylesheet" href="{% static 'frontpage/style.css' %}">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Ecoiza</title>
     <link rel="stylesheet" href="../../../static/frontpage/style.css">
+    <link rel="icon" href="../../../static/frontpage/icon.png" type="icon">
 </head>
 <body>
-    <header>
-        <h1 class="animated-title">Ecoiza</h1>
-        <nav>
-            <ul>
-                <li><a href="#sobre">Sobre Nós</a></li>
-                <li><a href="#servicos">Serviços</a></li>
-                <li><a href="#contato">Contato</a></li>
-            </ul>
-        </nav>
+    <header class="animate__animated animate__fadeInDown">
+        <div class="container">
+            <h1 class="animated-title">Ecoiza</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                </ul>
+            </nav>
+        </div>
     </header>
 
+    <section class="hero">
+        <div class="container">
+            <h2 class="animate__animated animate__fadeInUp">Bem-vindo à Ecoiza</h2>
+            <p class="animate__animated animate__fadeInUp animate__delay-1s">Especialistas em cardápios personalizados para restaurantes.</p>
+            <a href="#sobre" class="btn animate__animated animate__fadeInUp animate__delay-2s">Saiba Mais</a>
+        </div>
+    </section>
+
     <main>
-        <section id="sobre">
-            <h2>Sobre Nós</h2>
-            <p>Somos uma empresa especializada na criação de cardápios personalizados para restaurantes e outros estabelecimentos.</p>
+        <section id="sobre" class="content-section" data-aos="fade-up">
+            <div class="container">
+                <h2>Sobre Nós</h2>
+                <p>Somos uma empresa especializada na criação de cardápios personalizados para restaurantes e outros estabelecimentos.</p>
+            </div>
         </section>
 
-        <section id="servicos">
-            <h2>Serviços</h2>
-            <p>Oferecemos uma variedade de serviços para atender às suas necessidades de cardápios, incluindo design, impressão e consultoria.</p>
+        <section id="servicos" class="content-section" data-aos="fade-up">
+            <div class="container">
+                <h2>Serviços</h2>
+                <div class="service-cards">
+                    <div class="card" data-aos="flip-left">
+                        <h3>Design de Cardápios</h3>
+                        <p>Criação de cardápios atraentes e funcionais.</p>
+                    </div>
+                    <div class="card" data-aos="flip-right">
+                        <h3>Impressão de Cardápios</h3>
+                        <p>Impressão de alta qualidade para seus cardápios.</p>
+                    </div>
+                    <div class="card" data-aos="flip-left">
+                        <h3>Consultoria</h3>
+                        <p>Consultoria especializada para otimizar seu cardápio.</p>
+                    </div>
+                </div>
+            </div>
         </section>
 
-        <section id="contato">
-            <h2>Contato</h2>
-            <p>Entre em contato conosco para saber mais sobre nossos serviços e como podemos ajudar seu negócio.</p>
-            <form action="/enviar-contato" method="post">
-                <label for="nome">Nome:</label>
-                <input type="text" id="nome" name="nome" required>
-                <label for="email">Email:</label>
-                <input type="email" id="email" name="email" required>
-                <label for="mensagem">Mensagem:</label>
-                <textarea id="mensagem" name="mensagem" required></textarea>
-                <button type="submit">Enviar</button>
-            </form>
+        <section id="contato" class="content-section" data-aos="fade-up">
+            <div class="container">
+                <h2>Contato</h2>
+                <p>Entre em contato conosco para saber mais sobre nossos serviços e como podemos ajudar seu negócio.</p>
+                <form id="contact-form" action="/enviar-contato" method="post">
+                    <label for="nome">Nome:</label>
+                    <input type="text" id="nome" name="nome" required>
+                    <label for="email">Email:</label>
+                    <input type="email" id="email" name="email" required>
+                    <label for="mensagem">Mensagem:</label>
+                    <textarea id="mensagem" name="mensagem" required></textarea>
+                    <button type="submit">Enviar</button>
+                </form>
+            </div>
         </section>
     </main>
 
     <footer>
-        <p>© 2024 Ecoiza. Todos os direitos reservados.</p>
+        <div class="container">
+            <p>© 2024 Ecoiza. Todos os direitos reservados.</p>
+        </div>
     </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../../../static/frontpage/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
 </body>
 </html>
