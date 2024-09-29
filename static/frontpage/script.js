@@ -15,4 +15,19 @@ document.addEventListener('DOMContentLoaded', () => {
             const response = await fetch('/api/enviar-contato', {
                 method: 'POST',
                 headers: {
-                    'Content
+                    'Content-Type': 'application/json'
+                },
+                body: JSON.stringify(data)
+            });
+
+            if (!response.ok) {
+                throw new Error('Erro ao enviar o formulário');
+            }
+
+            const result = await response.json();
+            console.log('Sucesso:', result);
+        } catch (error) {
+            console.error('Erro:', error);
+        }
+    });
+});
