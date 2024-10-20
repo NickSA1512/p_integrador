@@ -1,0 +1,318 @@
+/* Fontes personalizadas */
+@import url('https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&display=swap');
+
+html[data-theme="light"],
+:root {
+    --body-fg: black;
+    --body-bg: #eaeaea;
+    --body-other: #ffffff;
+
+    --header-transp: #ffffff00;
+
+    color-scheme: light;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #B22222;
+    color: var(--body-fg);
+}
+
+.container {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.container-content {
+    width: 90%;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+#sobre {
+    font-weight: bold;
+    font-size: 1.2rem;
+}
+
+header {
+    background-color: #B22222; /* Firebrick Red */
+    background-image: linear-gradient(#B22222, #8B0000);
+    color: var(--body-fg);
+    width: auto;
+    height: auto;
+    display: flex;
+    align-items: center;
+    padding: 10px 40px;
+    text-align: center;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+#user-tools {
+    position: absolute;
+    left: 95.5%;
+    float: right;
+    margin: 0 0 0 20px;
+    text-align: right;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    overflow: hidden;
+    clip: rect(0,0,0,0);
+    white-space: nowrap;
+    border: 0;
+    color: var(--body-fg);
+    background-color: var(--body-bg);
+}
+
+header h1 {
+    margin: 0;
+    font-size: 3rem;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    margin: 1rem 0 0;
+}
+
+nav ul li {
+    margin: 0 1rem;
+}
+
+nav ul li a {
+    color: var(--body-fg);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s;
+}
+
+nav ul li a:hover {
+    color: #FF6347; /* Tomato Red */
+}
+
+.hero {
+    background: url('hero-image.png') no-repeat center center/cover;
+    color:  var(--body-fg);
+    text-align: center;
+    padding: 5rem 0;
+}
+
+.hero h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1rem;
+}
+
+.hero p {
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+}
+
+.hero .btn {
+    background-color: #FF6347; /* Tomato Red */
+    color:white;
+    padding: 1rem 2rem;
+    text-decoration: none;
+    border-radius: 5px;
+    transition: background-color 0.3s;
+}
+
+.hero .btn:hover {
+    background-color: #B22222; /* Firebrick Red */
+}
+
+.content-section {
+    padding: 4rem 0;
+    background-color : var(--body-bg);
+    text-align: center;
+}
+
+.content-section h2 {
+    color: #B22222; /* Firebrick Red */
+    font-size: 2rem;
+    margin-bottom: 1rem;
+}
+
+.content-section p {
+    color:  var(--body-fg);
+}
+
+.service-cards {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.card {
+    background-color: var(--body-other);
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    max-width: 50%;
+}
+
+.card h3 {
+    color: #B22222; /* Firebrick Red */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #666;
+}
+
+.card {
+    background-color: var(--body-other);
+    padding: 2rem;
+    margin: 1rem;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    flex: 1 1 30%;
+    max-width: 50;
+}
+
+.card h3 {
+    color: #B22222; /* Firebrick Red */
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+}
+
+.card p {
+    color: #666;
+}
+
+form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+form label {
+    margin-bottom: 0.5rem;
+    color: #333;
+}
+
+form input, form textarea {
+    margin-bottom: 1rem;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 1rem;
+    width: 100%;
+    max-width: 500px;
+}
+
+form button {
+    padding: 0.75rem 2rem;
+    border: none;
+    border-radius: 4px;
+    background-color: #B22222; /* Firebrick Red */
+    color: white;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #8B0000; /* Dark Red */
+}
+
+footer {
+    background-color: #333;
+    color: white;
+    text-align: center;
+    padding: 0.001rem 0;
+    position: fixed;
+    width: 100%;
+    bottom: 0;
+    box-shadow: 0 -4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Estilos para a seção de redes sociais */
+.wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 2rem;
+    padding: 2rem 0;
+}
+
+.icon {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 5rem;
+    height: 5rem;
+    background-color: var(--body-other);
+    color: #B22222; /* Firebrick Red */
+    border-radius: 50%;
+    transition: transform 0.3s, background-color 0.3s;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1)
+}
+
+.icon i {
+    font-size: 2rem;
+}
+
+.icon:hover {
+    transform: scale(1.2);
+    background-color: #FF6347; /* Tomato Red */
+    color: #fff;
+}
+
+@keyframes slide {
+    0% {
+        transform: translateX(-100%);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
+#Mapa .container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    text-align: center;
+}
+
+#Mapa .card {
+    width: 100%;
+    max-width: 800px;
+    margin: 0 auto;
+    padding: 1rem;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    background-color: #F8F8FF ;
+    border-radius: 8px;
+}
+
+/* Estiliza a barra de rolagem */
+::-webkit-scrollbar {
+    width: 12px;
+}
+
+
+::-webkit-scrollbar-track {
+    background: #f1f1f1;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #800000;
+    border-radius: 10px; 
+}
+
+
+::-webkit-scrollbar-thumb:hover {
+    background: #555; 
+}

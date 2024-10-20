@@ -1,16 +1,157 @@
 <!DOCTYPE html>
-<html lang="en">
-
-{% load static %}
-<link rel="stylesheet" href="{% static 'frontpage/style.css' %}">
-
+<html lang="pt-BR">
 <head>
+
+    {% load static %}
     <meta charset="UTF-8">
-    <title>Title</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ecoiza</title>
+    <link rel="stylesheet" href="../../../static/frontpage/style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="icon" href="../../../static/frontpage/icon.png" type="icon">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0-beta3/css/all.min.css">
+    <link rel="stylesheet" href="{% static 'frontpage/dark_mode.css' %}">
+    <script src="{% static 'frontpage/theme.js' %}"></script>
+
 </head>
 <body>
 
-<h1>FRONT PAGE</h1>
+    <!--Header-->
+    <header class="animate__animated animate__fadeInDown">
+        <div class="container">
+            <h1 class="animated-title">Ecoiza</h1>
+            <nav>
+                <ul>
+                    <li><a href="#sobre">Sobre Nós</a></li>
+                    <li><a href="#servicos">Serviços</a></li>
+                    <li><a href="#contato">Contato</a></li>
+                    <li><a href="#Mapa">Localização</a></li>
+                    <li><a href="#social-media">Redes Sociais</a></li>
+                </ul>
+            </nav>
+        </div>
+
+        <div id="user-tools">
+            <button class="theme-toggle">
+                <span class="visually-hidden theme-label-when-auto">Toggle theme (current theme: auto)</span>
+                <span class="visually-hidden theme-label-when-light">Toggle theme (current theme: light)</span>
+                <span class="visually-hidden theme-label-when-dark">Toggle theme (current theme: dark)</span>
+                <svg aria-hidden="true" class="theme-icon-when-auto">
+                <use xlink:href="#icon-auto" />
+                </svg>
+                <svg aria-hidden="true" class="theme-icon-when-dark">
+                <use xlink:href="#icon-moon" />
+                </svg>
+                <svg aria-hidden="true" class="theme-icon-when-light">
+                <use xlink:href="#icon-sun" />
+                </svg>
+            </button>
+        </div>
+    </header>
+    <!--END Header-->
+
+            <section class="hero">
+                <div class="container">
+                    <h2 class="animate__animated animate__fadeInUp">Bem-vindo à Ecoiza</h2>
+                    <p class="animate__animated animate__fadeInUp animate__delay-1s">Especialistas em cardápios personalizados para restaurantes.</p>
+                    <a href="#sobre" class="btn animate__animated animate__fadeInUp animate__delay-2s">Saiba Mais</a>
+                </div>
+            </section>
+
+    <main>
+            <section id="sobre" class="content-section" data-aos="fade-up">
+                <div class="container">
+                    <h2>Sobre Nós</h2>
+                    <div style="color: black;" data-aos="flip-left">
+                    <p>Na Ecoiza, acreditamos que um cardápio bem elaborado é a chave para uma experiência gastronômica memorável. Nossa missão é transformar a visão culinária dos nossos clientes em realidade, criando cardápios personalizados que refletem a identidade e os valores de cada estabelecimento.</p>
+                    <p>Com uma equipe de designers talentosos e especialistas em gastronomia, oferecemos soluções criativas e inovadoras para restaurantes, cafés, hotéis e eventos. Nosso processo colaborativo garante que cada cardápio seja único, atendendo às necessidades específicas de cada cliente e encantando seus consumidores.</p>
+                    <p>Valorizamos a qualidade, a criatividade e a satisfação do cliente. Por isso, utilizamos as melhores práticas de design e as tendências mais recentes do mercado para criar cardápios que não apenas informam, mas também inspiram.</p>
+                    <p>Junte-se a nós e descubra como podemos ajudar a elevar a experiência gastronômica do seu negócio a um novo patamar.</p>
+                    </div>
+                </div>
+            </section>
+
+            <section id="servicos" class="content-section" data-aos="fade-up">
+                <div class="container">
+                    <h2>Serviços</h2>
+                    <div class="service-cards">
+                        <div class="card" data-aos="flip-left">
+                            <h3>Design de Cardápios</h3>
+                            <p>Criação de cardápios atraentes e funcionais.</p>
+                        </div>
+                        <div class="card" data-aos="flip-right">
+                            <h3>Impressão de Cardápios</h3>
+                            <p>Impressão de alta qualidade para seus cardápios.</p>
+                        </div>
+                        <div class="card" data-aos="flip-left">
+                            <h3>Consultoria</h3>
+                            <p>Consultoria especializada para otimizar seu cardápio.</p>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+
+
+            <section id="contato" class="content-section" data-aos="fade-up">
+                <div class="container">
+                    <h2>Contato</h2>
+                    <p>Entre em contato conosco para saber mais sobre nossos serviços e como podemos ajudar seu negócio.</p>
+                    <h3>ecoiza@hotmail.com</h3>
+                </div>
+            </section>
+
+                <section id="Mapa" class="content-section" data-aos="fade-up">
+            <div class="container">
+                <div class="card" data-aos="flip-left">
+                    <h2>Nossa Localização</h2>
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1830.3094724989764!2d-45.08609577726693!3d-23.438128417172145!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94cd51212ce47e47%3A0xca1cd6b0b5340220!2sEcoiza%20Card%C3%A1pios%20e%20Muito%20Mais!5e0!3m2!1spt-BR!2sbr!4v1727627144749!5m2!1spt-BR!2sbr" 
+                    width="600" 
+                    height="450" 
+                    style="border:0;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+            </div>        
+                </section>
+
+ 
+ 
+        <section id="social-media" class="content-section" data-aos="fade-up">
+            <div class="container">
+                <h2>Siga-nos nas Redes Sociais</h2>
+                    <div class="wrapper">
+                        <a href="https://www.instagram.com/ecoiza/" class="icon"><i class="fa-brands fa-instagram"></i></a>
+                        <a href="https://api.whatsapp.com/send?phone=5512992125479&text=" class="icon"><i class="fa-brands fa-whatsapp"></i></a>
+                        <a href="https://www.facebook.com/ecoiza.recicle" class="icon"><i class="fa-brands fa-facebook-f"></i></a>
+                    </div>
+             </div>
+        </section>
+       
+    </main>
+
+    <footer>
+        <div class="container">
+            <p>© 2024 Ecoiza. Todos os direitos reservados.</p>
+        </div>
+    </footer>
+
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script src="../../../static/frontpage/script.js"></script>
+    <script>
+        AOS.init();
+    </script>
+
+    <!--SVGs-->
+    <svg xmlns="http://www.w3.org/2000/svg" class="base-svgs">
+        <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-auto"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 22C6.477 22 2 17.523 2 12S6.477 2 12 2s10 4.477 10 10-4.477 10-10 10zm0-2V4a8 8 0 1 0 0 16z"/></symbol>
+        <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-moon"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M10 7a7 7 0 0 0 12 4.9v.1c0 5.523-4.477 10-10 10S2 17.523 2 12 6.477 2 12 2h.1A6.979 6.979 0 0 0 10 7zm-6 5a8 8 0 0 0 15.062 3.762A9 9 0 0 1 8.238 4.938 7.999 7.999 0 0 0 4 12z"/></symbol>
+        <symbol viewBox="0 0 24 24" width="1rem" height="1rem" id="icon-sun"><path d="M0 0h24v24H0z" fill="currentColor"/><path d="M12 18a6 6 0 1 1 0-12 6 6 0 0 1 0 12zm0-2a4 4 0 1 0 0-8 4 4 0 0 0 0 8zM11 1h2v3h-2V1zm0 19h2v3h-2v-3zM3.515 4.929l1.414-1.414L7.05 5.636 5.636 7.05 3.515 4.93zM16.95 18.364l1.414-1.414 2.121 2.121-1.414 1.414-2.121-2.121zm2.121-14.85l1.414 1.415-2.121 2.121-1.414-1.414 2.121-2.121zM5.636 16.95l1.414 1.414-2.121 2.121-1.414-1.414 2.121-2.121zM23 11v2h-3v-2h3zM4 11v2H1v-2h3z"/></symbol>
+    </svg>
+    <!--END SVGs-->
 
 </body>
 </html>
